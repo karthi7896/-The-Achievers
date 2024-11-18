@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Picking right font family - see details on "fonts.xml"
+    Also see: http://stackoverflow.com/questions/12128331/how-to-change-fontfamily-of-textview-in-android
+-->
+<resources>
+
+    <!--
+        Other styles for the UI elements
+        ==============================================
+    -->
+    <style name="Widget.Leanback.Title.Text.Headlines">
+        <item name="android:textAppearance">@style/TextAppearance.Leanback.Title.Headlines</item>
+    </style>
+
+    <!-- Custom style for the title on top -->
+    <style name="TextAppearance.Leanback.Title.Headlines">
+        <item name="android:fontFamily">@string/font_family_medium</item>
+        <item name="android:textColor">@color/app_title_color</item>
+    </style>
+
+    <style name="Widget.Leanback.ImageCardView.ContentStyle.InfoText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:fontFamily">@string/font_family_light</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <!--
+        Styles for information based screens. Eg. About, Contribution etc.
+        ===================================================================
+    -->
+    <style name="InformationTextCentered">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="InformationSubtitleText" parent="InformationTextCentered">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Leanback.DetailsDescriptionBody</item>
+    </style>
+
+    <style name="InformationTitleText" parent="InformationTextCentered">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Leanback.DetailsDescriptionSubtitle</item>
+    </style>
+
+    <!--
+        Leanback details screen styles
+        ==============================================
+    -->
+    <style name="DetailsContentDescription" parent="Widget.Leanback.DetailsDescriptionBodyStyle">
+        <item name="android:fontFamily">sans-serif-regular</item>
+    </style>
+
+    <style name="DetailsContentDescriptionSubtitle" parent="Widget.Leanback.DetailsDescriptionSubtitleStyle">
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@string/font_family_condensed</item>
+    </style>
+
+    <style name="DetailsContentTitle" parent="Widget.Leanback.DetailsDescriptionTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:fontFamily">@string/font_family_light</item>
+    </style>
+
+    <!--
+        Headlines Card Item Styles
+        ==============================================
+    -->
+
+    <style name="CardHeadlineTitle" parent="Widget.Leanback.ImageCardView.ContentStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/default_card_background_color</item>
+        <item name="android:fontFamily">@string/font_family_black</item>
+        <item name="android:lines">6</item>
+        <item name="android:maxLines">6</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/card_headline_text</item>
+    </style>
+
+    <style name="CardHeadlineInfoText" parent="Widget.Leanback.ImageCardView.ContentStyle.InfoText">
+
+    </style>
+
+    <style name="CardHeadlineInfoText.Left"><!-- Info text on left - Usually category -->
+        <item name="android:layout_gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxWidth">@dimen/card_subtext_container_left_max_width</item>
+    </style>
+
+    <style name="CardHeadlineInfoText.Right"><!-- Info text on right - elapsed time since publish date -->
+        <item name="android:maxWidth">@dimen/card_subtext_container_right_max_width</item>
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <style name="CardHeadlineInfoBar"><!-- Container bar for "CardHeadlineInfoText" -->
+        <item name="android:background">@color/default_card_footer_background_color</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">7dp</item>
+    </style>
+
+
+    <!--
+        Feed search result.
+    -->
+    <style name="CardHeadlineTitle.Feed">
+        <item name="android:lines">3</item>
+        <item name="android:maxLines">3</item>
+    </style>
+
+    <style name="CardFeedInfoText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@color/default_card_footer_background_color</item>
+    </style>
+
+    <style name="CardFeedInfoText.Description">
+        <item name="android:fontFamily">@string/font_family_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:lines">4</item>
+    </style>
+
+</resources>

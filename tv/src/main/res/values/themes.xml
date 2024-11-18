@@ -1,0 +1,130 @@
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2016 Hossain Khan
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+
+    <style name="Theme.Headlines.Leanback" parent="Theme.Leanback">
+        <item name="android:windowEnterTransition">@android:transition/fade</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:colorPrimary">@color/search_opaque</item>
+        <item name="browseTitleTextStyle">@style/Widget.Leanback.Title.Text.Headlines</item>
+    </style>
+
+    <style name="Theme.Headlines.LeanbackPreferences" parent="Theme.Leanback">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Leanback</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:colorPrimary">@color/settings_background</item>
+    </style>
+
+    <style name="Theme.Headlines.LeanbackDetails" parent="Theme.Leanback.Details">
+        <item name="android:colorPrimary">@color/detail_view_actionbar_background</item>
+    </style>
+
+    <style name="Theme.Headlines.Leanback.GuidedStep.InformationDialog" parent="Theme.Leanback.GuidedStep">
+
+        <!-- background applied to each GuidedStepFragment by default-->
+        <item name="guidedStepBackground">@drawable/default_background</item>
+
+        <item name="guidedActionsBackground">@color/headlines_dialog_main_actions_background</item>
+        <item name="guidedActionsBackgroundDark">@color/headlines_dialog_subactions_background</item>
+        <item name="guidedActionDescriptionMinLines">@integer/info_dialog_guidedactions_item_description_min_lines</item>
+    </style>
+
+    <style name="Theme.Headlines.Leanback.GuidedStep.InformationDialog.NoSelector">
+        <item name="guidedActionsSelectorDrawable">@null</item>
+    </style>
+
+    <!--
+        Theme overrides for icon based CARD view.
+        ========================================================================
+    -->
+
+    <!-- Theme corresponding to the IconCardStyle -->
+    <style name="IconCardTheme" parent="Theme.Leanback">
+        <item name="imageCardViewStyle">@style/IconCardViewStyle</item>
+        <item name="imageCardViewTitleStyle">@style/IconCardTitleStyle</item>
+        <item name="imageCardViewImageStyle">@style/IconCardImageStyle</item>
+        <item name="imageCardViewInfoAreaStyle">@style/IconCardInfoAreaStyle</item>
+    </style>
+
+    <!-- Icon card style with custom focus handler. Used in cards example. -->
+    <style name="IconCardViewStyle" parent="DefaultCardStyle">
+        <item name="lbImageCardViewType">Title</item>
+    </style>
+
+    <style name="IconCardTitleStyle" parent="Widget.Leanback.ImageCardView.TitleStyle">
+        <item name="android:maxLines">2</item>
+        <item name="android:minLines">2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="IconCardImageStyle" parent="Widget.Leanback.ImageCardView.ImageStyle">
+        <item name="android:layout_width">96dp</item>
+        <item name="android:layout_height">96dp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="IconCardInfoAreaStyle" parent="Widget.Leanback.ImageCardView.InfoAreaStyle">
+        <item name="android:layout_width">96dp</item>
+        <item name="android:background">@null</item>
+        <item name="layout_viewType">main</item>
+    </style>
+
+    <!--
+        Theme overrides for image view based CARD view.
+        ========================================================================
+    -->
+
+    <style name="DefaultCardTheme" parent="Theme.Leanback">
+        <item name="imageCardViewStyle">@style/DefaultCardStyle</item>
+        <item name="imageCardViewImageStyle">@style/DefaultCardImageStyle</item>
+    </style>
+
+    <style name="DefaultCardStyle" parent="Widget.Leanback.ImageCardViewStyle">
+        <item name="cardBackground">@null</item>
+    </style>
+
+    <!-- A default card style. Used in cards example. -->
+    <style name="DefaultCardImageStyle" parent="Widget.Leanback.ImageCardView.ImageStyle">
+        <item name="android:layout_width">@dimen/default_image_card_width</item>
+        <item name="android:layout_height">@dimen/default_image_card_height</item>
+    </style>
+
+    <!--
+        Theme/Style for text-only based headlines CARD view.
+        ========================================================================
+    -->
+    <style name="TextCardStyle" parent="Widget.Leanback.BaseCardViewStyle">
+        <item name="cardBackground">@null</item>
+    </style>
+
+</resources>
