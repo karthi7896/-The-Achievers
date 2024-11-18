@@ -1,0 +1,86 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    // https://developer.android.com/studio/releases/build-tools.html
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    compileOnly "org.glassfish:javax.annotation:$rootProject.glassfishJavaxAnnotationVersion"
+
+    // Gson for JSON serialization and deserialization
+    // https://github.com/google/gson
+    api "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    // Retrofit
+    // https://github.com/square/retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-scalars:$rootProject.retrofitVersion"
+    implementation ("com.squareup.retrofit2:converter-simplexml:$rootProject.retrofitVersion") {
+        // https://github.com/square/retrofit/tree/master/retrofit-converters/simplexml
+        // exclude the following transitive dependencies: stax:stax-api, stax:stax, and xpp3:xpp3
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    // http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22adapter-rxjava%22
+    implementation "com.squareup.retrofit2:adapter-rxjava:$rootProject.retrofitVersion"
+
+    // RxJava
+    // https://github.com/ReactiveX/RxJava
+    api "io.reactivex:rxjava:$rootProject.rxJavaVersion"
+
+    // OkHttp - logging
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okHttpVersion"
+
+    // Swagger (for server api client)
+    implementation "io.swagger:swagger-annotations:$rootProject.swaggerVersion"
+
+    // http://www.joda.org/joda-time/dependency-info.html
+    api "joda-time:joda-time:$rootProject.jodaTimeVersion"
+
+    // ----------------------------------------------------------------
+    // Android Unit and Instrumentation test
+    // ----------------------------------------------------------------
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    testImplementation "junit:junit:$rootProject.junitVersion"
+}
+
