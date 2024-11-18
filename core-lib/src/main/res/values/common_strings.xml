@@ -1,0 +1,66 @@
+<!--
+    List of Strings used by UI modules (TV, Mobile and so on)
+-->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+
+    <!-- Common activity titles -->
+    <string name="title_activity_browse_headlines">Today\'s Headlines</string>
+    <string name="title_activity_headlines_details">Details</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_manage_feeds">Manage Feed</string>
+    <string name="title_activity_on_boarding">Welcome</string>
+
+    <!-- Common buttons -->
+    <string name="button_text_finish_on_boarding">Begin</string>
+
+
+    <!-- Settings Categories -->
+    <string name="settings_navigation_row_news_source_title">Settings</string>
+    <string name="settings_navigation_row_information_title">Information</string>
+
+    <!-- Settings Items -->
+    <string name="settings_card_item_news_source_title">Categories</string>
+    <string name="settings_card_item_add_news_source_feed_title">Add Source</string>
+    <string name="settings_card_item_manage_news_source_feed_title">Manage Sources</string>
+    <string name="settings_card_item_contribution_title">Contribute</string>
+    <string name="settings_card_item_about_app_title">About</string>
+
+    <string name="navigation_header_item_settings_title">Manage</string>
+    <string name="navigation_header_item_news_source_nytimes_title">The New York Times</string>
+    <string name="detail_view_title">Details</string>
+
+
+    <!--
+        Contains list of category names supported by the application.
+        See "info.hossainkhan.android.core.data.CategoryNameResolver" class for more info.
+
+
+        Here are some example category keyword which may be translated to longer version.
+
+            home, opinion, world, national, politics, upshot, nyregion, business, technology, science, health,
+            sports, arts, books, movies, theater, sundayreview, fashion, tmagazine, food, travel, magazine,
+            realestate, automobiles, obituaries, insider
+    -->
+    <string name="category_name_default">News Headlines</string>
+    <string name="category_name_top_news">Top Headlines</string>
+    <string name="category_name_world">World News</string>
+    <string name="category_name_business">Money &amp; Business</string>
+    <string name="category_name_technology">Science &amp; Technology</string>
+    <string name="category_name_movies">Movies</string>
+    <string name="category_name_sports">Sports</string>
+    <!--  END of Category names -->
+
+
+    <!-- Onboarding experience screen -->
+    <string name="onboarding_title_welcome">Your Daily Headlines</string>
+    <string name="onboarding_description_welcome">Just simply %4$s <b>\"headlines\"</b> on your %1$s.
+        \nTake a quick %2$s while you sip through your %3$s</string>
+    <string name="onboarding_title_contribute">Open Source</string>
+    <string name="onboarding_description_contribute">You are welcome to contribute %1$s
+        \nhttps://github.com/amardeshbd/android-daily-headlines</string>
+    <string name="onboarding_title_relax">Thank You &amp; Enjoy! %1$s</string>
+    <string name="onboarding_description_relax">This app is under development %1$s and in BETA phase %2$s.
+        \nReport any %3$s or %4$s%5$s at https://goo.gl/AiaCw8</string>
+
+</resources>

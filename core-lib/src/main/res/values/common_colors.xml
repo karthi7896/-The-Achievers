@@ -1,0 +1,113 @@
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2018 Hossain Khan
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<!--
+    Application specific colors. Primary palette is "Blue Grey"
+
+    https://material.google.com/style/color.html#color-color-palette
+-->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+
+    <!--
+        Palette color from http://paletton.com/
+    -->
+    <color name="palette_primary1">#37474F</color>
+    <color name="palette_primary2">#6B7B83</color>
+    <color name="palette_primary3">#4E6068</color>
+    <color name="palette_primary4">#202F36</color>
+    <color name="palette_primary5">#132731</color>
+
+    <color name="palette_secondary1">#3E4156</color>
+    <color name="palette_secondary2">#777A8E</color>
+    <color name="palette_secondary3">#575A71</color>
+    <color name="palette_secondary4">#25273B</color>
+    <color name="palette_secondary5">#181B36</color>
+
+    <color name="palette_secondary_composite1">#3D5949</color>
+    <color name="palette_secondary_composite2">#789384</color>
+    <color name="palette_secondary_composite3">#567564</color>
+    <color name="palette_secondary_composite4">#223D2E</color>
+    <color name="palette_secondary_composite5">#143723</color>
+    <color name="news_source_item_highlight">#0AFFFFFF</color>
+
+    <!--
+        Application primary color
+    -->
+    <color name="colorPrimary">@color/palette_primary1</color>
+    <color name="colorPrimaryDark">@color/palette_secondary1</color>
+    <color name="colorAccent">@color/palette_secondary_composite1</color>
+
+    <!--
+        Generic colors
+    -->
+    <color name="soft_opaque">#30000000</color>
+    <color name="img_soft_opaque">#30FF0000</color>
+    <color name="img_full_opaque">#00000000</color>
+    <color name="black_opaque">#AA000000</color>
+    <color name="black">#59000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="card_headline_text">#DDFFFFFF</color>
+    <color name="orange_transparent">#AAFADCA7</color>
+    <color name="progress_indicator_tint">#00796B</color>
+    <color name="vector_icon_fill_color">#AAE0E0E0</color>
+    <color name="feed_bookmark_tint">#41ff41</color>
+
+    <!-- Navigation Sidebar on Headline Browser -->
+    <color name="fastlane_background">#37474F</color>
+    <color name="app_title_color">#90A4AE</color>
+
+    <color name="background_gradient_start">#263238</color>
+    <color name="background_gradient_end">#D7E7DF</color>
+    <color name="search_opaque">@color/palette_secondary2</color>
+    <color name="selected_background">@color/palette_secondary4</color>
+    <color name="detail_background">#0096a6</color>
+
+    <color name="default_background">#3d3d3d</color>
+    <color name="headlines_dialog_main_actions_background">@color/fastlane_background</color>
+    <color name="headlines_dialog_subactions_background">#263238</color>
+
+    <!--
+        Settings
+    -->
+    <color name="settings_background">#00695C</color>
+
+    <!--
+        Details View
+    -->
+    <color name="detail_view_actionbar_background">#263238</color><!-- Note does not support ALPHA -->
+    <color name="detail_view_background">#aa37474F</color>
+    <color name="detail_view_related_background">#cc263238</color>
+
+    <!--
+        Card View
+    -->
+    <color name="default_card_background_color">#88263238</color>
+    <color name="default_card_footer_background_color">#ee37474F</color>
+    <color name="selected_card_footer_background_color">#00897B</color>
+
+    <!--
+        Information View
+    -->
+    <color name="information_card_background_color">#9937474F</color>
+</resources>
